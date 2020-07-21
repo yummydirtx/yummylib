@@ -19,7 +19,7 @@ namespace yummydirt {
         os << number;
         std::string numWord{os.str()};
         std::cout << numWord;
-        return """;
+        return "";
     }
 
 }
