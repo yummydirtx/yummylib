@@ -6,10 +6,11 @@
 namespace yummydirt {
 
     std::string reverseString(std::string s) {
-        for (long unsigned int i{s.length() - 1}; i > -1; i--) {
-            std::cout << s[i];
+        std::string reversed{""};
+        for (int i{static_cast<int>(s.length()) - 1}; i > -1; i--) {
+            reversed.append(1, s[i]);
         }
-        return s;
+        return reversed;
     }
 
 }
