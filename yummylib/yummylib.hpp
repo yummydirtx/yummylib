@@ -16,7 +16,7 @@ Complete documentation is in the readme
 #include <sstream>
 
 namespace yummydirt {
-
+    // This reverses the string inputted and returns it
     std::string reverseString(std::string s) {
         std::string reversed{""};
         for (int i{static_cast<int>(s.length()) - 1}; i > -1; i--) {
@@ -24,7 +24,7 @@ namespace yummydirt {
         }
         return reversed;
     }
-
+    // This turns any number (under a trillion) to a phrase
     std::string numToWord(int number) {
         std::string digitName(int digit);
         std::string teenName(int number);
