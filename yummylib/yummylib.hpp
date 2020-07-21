@@ -2,6 +2,7 @@
 
 #include <string>
 #include <iostream>
+#include <sstream>
 
 namespace yummydirt {
 
@@ -11,6 +12,14 @@ namespace yummydirt {
             reversed.append(1, s[i]);
         }
         return reversed;
+    }
+
+    std::string numToWord(int number) {
+        std::ostringstream os;
+        os << number;
+        std::string numWord{os.str()};
+        std::cout << numWord;
+        return """;
     }
 
 }
