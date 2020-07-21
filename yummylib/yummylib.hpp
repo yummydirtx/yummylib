@@ -18,7 +18,14 @@ namespace yummydirt {
         std::ostringstream os;
         os << number;
         std::string numWord{os.str()};
-        std::cout << numWord;
+        std::string word{""};
+        int numLength{static_cast<int>(numWord.length())};
+        for (int i{0}; i <= numLength; i++) {
+            switch (numWord[i]) {
+                
+            }
+        }
+        std::cout << numWord << '\n' << numLength << '\n';
         return "";
     }
 
