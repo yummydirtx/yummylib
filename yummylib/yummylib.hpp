@@ -1,3 +1,13 @@
+/*
+This was written by:
+    _    _             _____           _   _    _       
+   / \  | | _____  __ |  ___| __ _   _| |_| | _(_)_ __  
+  / _ \ | |/ _ \ \/ / | |_ | '__| | | | __| |/ / | '_ \ 
+ / ___ \| |  __/>  <  |  _|| |  | |_| | |_|   <| | | | |
+/_/   \_\_|\___/_/\_\ |_|  |_|   \__,_|\__|_|\_\_|_| |_|
+Not all of this was entirely written by me, but this was certainly put together by me.
+Complete documentation is in the readme                              
+*/
 #pragma once
 
 #include <string>
