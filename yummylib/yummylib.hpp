@@ -2,6 +2,7 @@
 
 #include <string>
 #include <iostream>
+#include <vector>
 #include <sstream>
 
 namespace yummydirt {
@@ -15,18 +16,31 @@ namespace yummydirt {
     }
 
     std::string numToWord(int number) {
-        std::ostringstream os;
-        os << number;
-        std::string numWord{os.str()};
-        std::string word{""};
-        int numLength{static_cast<int>(numWord.length())};
-        for (int i{0}; i <= numLength; i++) {
-            switch (numWord[i]) {
-                
-            }
+        std::string digitName(int digit);
+        std::string teenName(int number);
+        std::string tensName(int number);
+        std::string intName(int number);
+
+        std::vector<std::string> ones {"","one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+        std::vector<std::string> teens {"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen","sixteen", "seventeen", "eighteen", "nineteen"};
+        std::vector<std::string> tens {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
+
+        if (number < 10) {
+            return ones[number];
+        } else if (number < 20) {
+            return teens [number - 10];
+        } else if (number < 100) {
+            return tens[number / 10] + ((number % 10 != 0) ? " " + numToWord(number % 10) : "");
+        } else if (number < 1000) {
+            return numToWord(number / 100) + " hundred" + ((number % 100 != 0) ? " " + numToWord(number % 100) : "");
+        } else if (number < 1000000) {
+            return numToWord(number / 1000) + " thousand" + ((number % 1000 != 0) ? " " + numToWord(number % 1000) : "");
+        } else if (number < 1000000000) {
+            return numToWord(number / 1000000) + " million" + ((number % 1000000 != 0) ? " " + numToWord(number % 1000000) : "");
+        } else if (number < 1000000000000) {
+            return numToWord(number / 1000000000) + " billion" + ((number % 1000000000 != 0) ? " " + numToWord(number % 1000000000) : "");
         }
-        std::cout << numWord << '\n' << numLength << '\n';
-        return "";
+        return "error";
     }
 
 }
